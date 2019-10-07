@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{9D9F98AC-787C-42C1-9E06-794D5DB8E656}"
+	ProjectSection(SolutionItems) = preProject
+		build\common.props = build\common.props
+		build\Key.snk = build\Key.snk
+		build\readme.md = build\readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C70B4E5C-4CFC-45B1-A038-08E0683407AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4A4EAC6A-2D60-48F2-A771-F50A644CB214}"
+	ProjectSection(SolutionItems) = preProject
+		test\readme.md = test\readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{45C56E95-4AE4-4DDC-9556-D0A953E31D68}"
+	ProjectSection(SolutionItems) = preProject
+		tools\readme.md = tools\readme.md
+		tools\Resources.tt = tools\Resources.tt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vertis.PayGO.Gate2All.HttpClient", "src\Vertis.PayGO.Gate2All.HttpClient\Vertis.PayGO.Gate2All.HttpClient.csproj", "{68B198AB-995C-46CD-8614-71BA5152FEDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68B198AB-995C-46CD-8614-71BA5152FEDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B198AB-995C-46CD-8614-71BA5152FEDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B198AB-995C-46CD-8614-71BA5152FEDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B198AB-995C-46CD-8614-71BA5152FEDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{68B198AB-995C-46CD-8614-71BA5152FEDE} = {C70B4E5C-4CFC-45B1-A038-08E0683407AD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3E9108B-F97F-4A71-9905-7A17C33B45D2}
+	EndGlobalSection
+EndGlobal

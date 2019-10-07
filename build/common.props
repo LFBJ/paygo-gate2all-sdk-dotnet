@@ -1,0 +1,102 @@
+﻿<Project>
+  <!-- :: Assembly Signing :: -->
+  <PropertyGroup>
+    <!-- TODO: Removendo o "Strong Name Signing" das Assemblies. -->
+    <!-- Existe um forte debate entre assinar ou não as assemblies. Precisa ser mais discutido. -->
+    <!--<AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)Key.snk</AssemblyOriginatorKeyFile>
+    <PublicSign Condition="'$(OS)' != 'Windows_NT'">True</PublicSign>
+    <SignAssembly>True</SignAssembly>-->
+  </PropertyGroup>
+
+  <!-- :: Compilation Constraints :: -->
+  <PropertyGroup>
+    <!-- TODO: Trocar para True quando o código-fonte estiver devidamente documentado -->
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <!-- TODO: Remover o código de "Warning" 1591 abaixo quando o código-fonte estiver devidamente documentado -->
+    <NoWarn>1701;1702;1705;1591</NoWarn>
+
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DebugType Condition="'$(Configuration)' == 'Debug' AND '$(OS)' == 'Windows_NT'">full</DebugType>
+  </PropertyGroup>
+
+  <!-- :: Package Generation :: -->
+  <PropertyGroup>
+    <Product>PayGO Gate2All HTTP Client SDK</Product>
+    <Authors>mirandaasm, Vertis, FastChannel</Authors>
+    <Company>Fast Channel, by Vertis Tecnologia Ltda.</Company>
+    <Copyright>Copyright 2012-2019</Copyright>
+    <PackageTags>fast channel vertis commerce gate2all http client sdk</PackageTags>
+    <PackageLicenseUrl>https://cdn.rawgit.com/fastchannel/kaive/e7397967/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>http://kb.fastchannel.com</PackageProjectUrl>
+    <PackageIconUrl>https://cdn.rawgit.com/fastchannel/kaive/f1f71a5d/artwork/fastchannel_logo_64x64.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/fastchannel/paygo-gate2all-sdk-dotnet</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <IncludeSource>True</IncludeSource>
+    <IncludeSymbols>True</IncludeSymbols>
+    <NoPackageAnalysis>True</NoPackageAnalysis>
+  </PropertyGroup>
+
+  <!-- :: Compilation Constants :: -->
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <DefineConstants>NETFRAMEWORK</DefineConstants>
+    <DefineConstants>NET45</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net451' ">
+    <DefineConstants>NETFRAMEWORK</DefineConstants>
+    <DefineConstants>NET45</DefineConstants>
+    <DefineConstants>NET451</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net452' ">
+    <DefineConstants>NETFRAMEWORK</DefineConstants>
+    <DefineConstants>NET45</DefineConstants>
+    <DefineConstants>NET452</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <DefineConstants>NETFRAMEWORK</DefineConstants>
+    <DefineConstants>NET46</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <DefineConstants>NETFRAMEWORK</DefineConstants>
+    <DefineConstants>NET46</DefineConstants>
+    <DefineConstants>NET461</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net462' ">
+    <DefineConstants>NETFRAMEWORK</DefineConstants>
+    <DefineConstants>NET46</DefineConstants>
+    <DefineConstants>NET462</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net47' ">
+    <DefineConstants>NETFRAMEWORK</DefineConstants>
+    <DefineConstants>NET47</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net471' ">
+    <DefineConstants>NETFRAMEWORK</DefineConstants>
+    <DefineConstants>NET47</DefineConstants>
+    <DefineConstants>NET471</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net472' ">
+    <DefineConstants>NETFRAMEWORK</DefineConstants>
+    <DefineConstants>NET47</DefineConstants>
+    <DefineConstants>NET472</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+    <DefineConstants>NETSTANDARD</DefineConstants>
+    <DefineConstants>NETSTANDARD1_3</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
+    <DefineConstants>NETSTANDARD</DefineConstants>
+    <DefineConstants>NETSTANDARD1_4</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
+    <DefineConstants>NETSTANDARD</DefineConstants>
+    <DefineConstants>NETSTANDARD1_5</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+    <DefineConstants>NETSTANDARD</DefineConstants>
+    <DefineConstants>NETSTANDARD1_6</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <DefineConstants>NETSTANDARD</DefineConstants>
+    <DefineConstants>NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+</Project>
