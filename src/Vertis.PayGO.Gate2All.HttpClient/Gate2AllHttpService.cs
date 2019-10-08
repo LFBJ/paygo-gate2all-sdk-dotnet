@@ -25,6 +25,12 @@ namespace Vertis.PayGO.Gate2All.HttpClient
 
         protected System.Net.Http.HttpClient HttpClient { get; }
 
+        public Gate2AllHttpService(Gate2AllConnectionSettings connectionSettings,
+            Func<Gate2AllConnectionSettings, System.Net.Http.HttpClient> httpClientFactory) : this(
+            httpClientFactory?.Invoke(connectionSettings) ?? throw new ArgumentNullException(nameof(httpClientFactory)))
+        {
+        }
+
         public Gate2AllHttpService(System.Net.Http.HttpClient httpClient)
         {
             HttpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));

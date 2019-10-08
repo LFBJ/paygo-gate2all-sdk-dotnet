@@ -12,8 +12,8 @@
       Commonly used types:
       Vertis.PayGO.Gate2All.HttpClient.IGate2AllHttpService
     </Description>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
     <PackageReleaseNotes>Initial rush release, still missing unit tests and documentation.</PackageReleaseNotes>
   </PropertyGroup>
 
