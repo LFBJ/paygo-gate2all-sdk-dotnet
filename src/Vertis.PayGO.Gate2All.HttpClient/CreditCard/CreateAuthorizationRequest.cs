@@ -21,7 +21,7 @@ namespace Vertis.PayGO.Gate2All.HttpClient.CreditCard
         /// <summary>
         /// Valor da transação sem pontuação. Os dois últimos dígitos são os centavos (Ex: amount: 100 = R$ 1,00).
         /// </summary>
-        [DataMember(Name = "amout", EmitDefaultValue = true, IsRequired = true)]
+        [DataMember(Name = "amount", EmitDefaultValue = true, IsRequired = true)]
         public int TotalAmount { get; set; }
 
         /// <summary>
@@ -43,15 +43,9 @@ namespace Vertis.PayGO.Gate2All.HttpClient.CreditCard
         public CustomerDetails CustomerDetails { get; set; }
 
         /// <summary>
-        /// Detalhes da transação de cartão. Obrigatório.
+        /// Detalhes de pagamento da transação. Obrigatório.
         /// </summary>
-        [DataMember(Name = "card", EmitDefaultValue = true, IsRequired = true)]
-        public CardTransactionDetails CardTransactionDetails { get; set; }
-
-        /// <summary>
-        /// Detalhes do cartão do cliente. Obrigatório.
-        /// </summary>
-        [DataMember(Name = "cardInfo", EmitDefaultValue = true, IsRequired = true)]
-        public CustomerCardDetails CustomerCardDetails { get; set; }
+        [DataMember(Name = "payment", EmitDefaultValue = true, IsRequired = true)]
+        public PaymentDetails PaymentDetails { get; set; }
     }
 }

@@ -72,5 +72,11 @@ namespace Vertis.PayGO.Gate2All.HttpClient.CreditCard
         /// </summary>
         [DataMember(Name = "recurrent", EmitDefaultValue = false, IsRequired = false)]
         public bool Recurrent { get; set; }
+
+        /// <summary>
+        /// Detalhes do cartão do cliente. Obrigatório.
+        /// </summary>
+        [DataMember(Name = "cardInfo", EmitDefaultValue = true, IsRequired = true)]
+        public CustomerCardDetails CustomerCardDetails { get; set; }
     }
 }
