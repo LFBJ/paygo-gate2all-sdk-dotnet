@@ -89,7 +89,7 @@ namespace Vertis.PayGO.Gate2All.HttpClient.CreditCard
         /// Indicador de autenticação da transação.
         /// Ver a documentação da Gate2All para mais detalhes: https://ntksolutions.github.io/API-GATE2all/#status-eci
         /// </summary>
-        [DataMember(Name = "saveCard", EmitDefaultValue = false, IsRequired = false)]
+        [DataMember(Name = "authenticationECI", EmitDefaultValue = false, IsRequired = false)]
         public string AuthenticationEci { get; set; }
 
         /// <summary>
