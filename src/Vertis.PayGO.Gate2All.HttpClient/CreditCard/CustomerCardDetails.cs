@@ -18,19 +18,19 @@ namespace Vertis.PayGO.Gate2All.HttpClient.CreditCard
         /// Mês da validade do cartão. Formato MM. Obrigatório.
         /// </summary>
         [DataMember(Name = "expirationMonth", EmitDefaultValue = true, IsRequired = true)]
-        public int ExpirationMonth { get; set; }
+        public string ExpirationMonth { get; set; }
 
         /// <summary>
         /// Ano da validade do cartão. Formato YYYY. Obrigatório.
         /// </summary>
         [DataMember(Name = "expirationYear", EmitDefaultValue = true, IsRequired = true)]
-        public int ExpirationYear { get; set; }
+        public string ExpirationYear { get; set; }
 
         /// <summary>
         /// Código de segurança do cartão, com até quatro dígitos. Obrigatório.
         /// </summary>
         [DataMember(Name = "cvv", EmitDefaultValue = true, IsRequired = true)]
-        public int SecurityCode { get; set; }
+        public string SecurityCode { get; set; }
 
         /// <summary>
         /// Nome identificador da bandeira do cartão, obrigatório, conforme lista:

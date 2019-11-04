@@ -62,6 +62,37 @@ namespace Vertis.PayGO.Gate2All.HttpClient.CreditCard
         public string ProviderVersion { get; set; }
 
         /// <summary>
+        /// Mensagem de retorno do Fornecedor (Adquirente) que processou a transação.
+        /// </summary>
+        [DataMember(Name = "providerMessage", EmitDefaultValue = false, IsRequired = false)]
+        public string ProviderMessage { get; set; }
+
+        /// <summary>
+        /// Codigo de resposta do Fornecedor (Adquirente) que processou a transação.
+        /// </summary>
+        [DataMember(Name = "providerCode", EmitDefaultValue = false, IsRequired = false)]
+        public string ProviderCode { get; set; }
+
+        /// <summary>
+        /// Código de referência retornado pelo Fornecedor (Adquirente) que processou a transação.
+        /// </summary>
+        [DataMember(Name = "providerReference", EmitDefaultValue = false, IsRequired = false)]
+        public string ProviderReference { get; set; }
+
+        /// <summary>
+        /// Codigo de autorização do Fornecedor (Adquirente) que processou a transação.
+        /// </summary>
+        [DataMember(Name = "codAuthorization", EmitDefaultValue = false, IsRequired = false)]
+        public string AuthorizationCode { get; set; }
+
+        /// <summary>
+        /// Indicador de autenticação da transação.
+        /// Ver a documentação da Gate2All para mais detalhes: https://ntksolutions.github.io/API-GATE2all/#status-eci
+        /// </summary>
+        [DataMember(Name = "saveCard", EmitDefaultValue = false, IsRequired = false)]
+        public string AuthenticationEci { get; set; }
+
+        /// <summary>
         /// Booleano que indica se os dados do cartão deverão ser salvos no ambiente Gate2All (tokenização). Opcional. Valor padrão: false (não salvar).
         /// </summary>
         [DataMember(Name = "saveCard", EmitDefaultValue = false, IsRequired = false)]
