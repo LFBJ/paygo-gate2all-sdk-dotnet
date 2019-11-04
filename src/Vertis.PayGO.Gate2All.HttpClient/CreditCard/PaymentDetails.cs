@@ -11,7 +11,7 @@ namespace Vertis.PayGO.Gate2All.HttpClient.CreditCard
         /// <summary>
         /// Detalhes da transação de cartão. Obrigatório.
         /// </summary>
-        [DataMember(Name = "card", EmitDefaultValue = true, IsRequired = true)]
+        [DataMember(Name = "card", EmitDefaultValue = true, IsRequired = false)]
         public CardTransactionDetails CardTransactionDetails { get; set; }
     }
 }

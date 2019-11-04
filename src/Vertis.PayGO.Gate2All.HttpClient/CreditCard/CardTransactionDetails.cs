@@ -23,13 +23,13 @@ namespace Vertis.PayGO.Gate2All.HttpClient.CreditCard
         /// <summary>
         /// Booleano que indica se haverá captura automática ou se a captura será realizada posteriormente, em uma requisição subsequente. Padrão: true (captura automaticamente a transação).
         /// </summary>
-        [DataMember(Name = "capture", EmitDefaultValue = true, IsRequired = true)]
+        [DataMember(Name = "capture", EmitDefaultValue = true, IsRequired = false)]
         public bool AutoCapture { get; set; } = true;
 
         /// <summary>
         /// Quantidade de parcelas desejadas na transação. Obrigatório. O valor enviado deve estar entre 1 e 99.
         /// </summary>
-        [DataMember(Name = "installments", EmitDefaultValue = true, IsRequired = true)]
+        [DataMember(Name = "installments", EmitDefaultValue = true, IsRequired = false)]
         public int Installments { get; set; }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace Vertis.PayGO.Gate2All.HttpClient.CreditCard
         /// <summary>
         /// Detalhes do cartão do cliente. Obrigatório.
         /// </summary>
-        [DataMember(Name = "cardInfo", EmitDefaultValue = true, IsRequired = true)]
+        [DataMember(Name = "cardInfo", EmitDefaultValue = true, IsRequired = false)]
         public CustomerCardDetails CustomerCardDetails { get; set; }
     }
 }

@@ -15,13 +15,13 @@ namespace Vertis.PayGO.Gate2All.HttpClient.CreditCard
         /// <summary>
         /// Identificador da transação no ambiente da loja. Texto, máx 100 caracteres, obrigatório.
         /// </summary>
-        [DataMember(Name = "referenceId", EmitDefaultValue = true, IsRequired = true)]
+        [DataMember(Name = "referenceId", EmitDefaultValue = true, IsRequired = false)]
         public string ReferenceId { get; set; }
 
         /// <summary>
         /// Valor da transação sem pontuação. Os dois últimos dígitos são os centavos (Ex: amount: 100 = R$ 1,00).
         /// </summary>
-        [DataMember(Name = "amount", EmitDefaultValue = true, IsRequired = true)]
+        [DataMember(Name = "amount", EmitDefaultValue = true, IsRequired = false)]
         public int TotalAmount { get; set; }
 
         /// <summary>
@@ -39,13 +39,13 @@ namespace Vertis.PayGO.Gate2All.HttpClient.CreditCard
         /// <summary>
         /// Detalhes do cliente (portador do cartão). Obrigatório.
         /// </summary>
-        [DataMember(Name = "customer", EmitDefaultValue = true, IsRequired = true)]
+        [DataMember(Name = "customer", EmitDefaultValue = true, IsRequired = false)]
         public CustomerDetails CustomerDetails { get; set; }
 
         /// <summary>
         /// Detalhes de pagamento da transação. Obrigatório.
         /// </summary>
-        [DataMember(Name = "payment", EmitDefaultValue = true, IsRequired = true)]
+        [DataMember(Name = "payment", EmitDefaultValue = true, IsRequired = false)]
         public PaymentDetails PaymentDetails { get; set; }
     }
 }

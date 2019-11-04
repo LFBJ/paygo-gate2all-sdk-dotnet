@@ -11,19 +11,19 @@ namespace Vertis.PayGO.Gate2All.HttpClient.Customer
         /// <summary>
         /// Nome do portador do cartão ou sacado/pagador do boleto. Texto, máx. 100 caracteres, obrigatório.
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = true, IsRequired = true)]
+        [DataMember(Name = "name", EmitDefaultValue = true, IsRequired = false)]
         public string Name { get; set; }
 
         /// <summary>
         /// Documento (CPF/CNPJ) do portador do cartão ou sacado/pagador do boleto. Texto, máx. 18 caracteres, obrigatório.
         /// </summary>
-        [DataMember(Name = "document", EmitDefaultValue = true, IsRequired = true)]
+        [DataMember(Name = "document", EmitDefaultValue = true, IsRequired = false)]
         public string Document { get; set; }
 
         /// <summary>
         /// E-mail do portador do cartão ou sacado/pagador do boleto. Texto, máx. 100 caracteres, obrigatório.
         /// </summary>
-        [DataMember(Name = "email", EmitDefaultValue = true, IsRequired = true)]
+        [DataMember(Name = "email", EmitDefaultValue = true, IsRequired = false)]
         public string Email { get; set; }
     }
 }
